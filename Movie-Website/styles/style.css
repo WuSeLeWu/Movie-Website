@@ -1,0 +1,526 @@
+@import url("https://fonts.googleapis.com/css2?family=Electrolize&display=swap");
+
+/*! base css Start */
+
+:root {
+  --Main-color: #000;
+  --Font-color: #fff;
+}
+
+* {
+  font-family: "Electrolize", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-transform: capitalize;
+  transition: ease 0.2s;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  list-style: none;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+.container {
+  background-color: black;
+  color: white;
+  padding-left: 5rem;
+}
+
+html::-webkit-scrollbar {
+  width: 0.8rem;
+  background-color: white;
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: black;
+  border-radius: 3rem;
+}
+
+html::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+/*! base css End */
+
+/*! Header-SideBar Start */
+
+.navbar-container {
+  background-color: var(--Main-color);
+  color: var(--Font-color);
+  height: 6rem;
+  position: sticky;
+  top: 0;
+  padding: 0 5rem;
+  z-index: 99;
+}
+
+.navbar-container .navbar {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-container .navbar .logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  column-gap: 1rem;
+}
+
+.navbar-container .navbar .logo img {
+  height: 4rem;
+  object-fit: cover;
+}
+
+.navbar-container .navbar .logo h1 {
+  font-size: 2rem;
+  color: #e62421;
+}
+
+.navbar-container .navbar .menu-list {
+  display: flex;
+  column-gap: 3rem;
+  font-size: 1.6rem;
+}
+
+.navbar-container .navbar .menu-list a {
+  color: var(--Font-color);
+  padding: 0.3rem 0;
+}
+
+.navbar-container .navbar .menu-list .bold {
+  font-weight: bold;
+  border-bottom: #fff solid 0.1rem;
+}
+
+.navbar-container .navbar .menu-list a:hover {
+  font-weight: bold;
+}
+
+.navbar-container .navbar .profile-container {
+  font-size: 1.6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 2rem;
+}
+
+.navbar-container .navbar .profile-container img {
+  width: 3.2rem;
+  height: 3.2rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.navbar-container .navbar .profile-container .my-account {
+  cursor: pointer;
+  border-left: 0.1rem solid var(--Font-color);
+  border-right: 0.1rem solid var(--Font-color);
+  padding: 0.5rem;
+  border-radius: 3rem;
+}
+
+.navbar-container .navbar .profile-container .toggle {
+  width: 4.4rem;
+  height: 2.3rem;
+  background-color: #fff;
+  border-radius: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.navbar-container .navbar .profile-container .toggle i {
+  color: goldenrod;
+  margin: 0.3rem;
+}
+
+.navbar-container .navbar .profile-container .toggle .toggle-ball {
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 50%;
+  background-color: var(--Main-color);
+  position: absolute;
+  right: 0.08rem;
+  cursor: pointer;
+}
+
+.sidebar {
+  height: 100%;
+  width: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--Main-color);
+  color: var(--Font-color);
+  padding-top: 6rem;
+  row-gap: 4rem;
+  position: fixed;
+  top: 0;
+}
+
+.sidebar i {
+  font-size: 2rem;
+  cursor: pointer;
+}
+/*! Header-SideBar End */
+/*! Home Start */
+
+.container .content-wrapper {
+  background: url(../img/bg.jpg) no-repeat;
+  padding: 50px;
+  height: calc(100vh - 56.25px);
+  background-size: 100% 100%;
+  object-fit: cover;
+}
+
+.container .content-wrapper .featured-content {
+  max-width: 47.8rem;
+  max-height: 55rem;
+}
+
+.container .content-wrapper .featured-content .bgimg {
+  background: url(../img/wandalogo.png) no-repeat;
+  background-size: 100% 100%;
+  width: 50rem;
+  height: 30rem;
+}
+
+.container .content-wrapper .featured-content p {
+  color: var(--Font-color);
+  background-color: rgba(256, 256, 256, 0.1);
+  width: 50rem;
+  font-size: 1.5rem;
+  padding: 1rem;
+  margin: 0 0 3rem 0;
+}
+
+.container .content-wrapper .featured-content .buttons {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.container .content-wrapper .featured-content button {
+  padding: 1rem 2.5rem;
+  display: flex;
+  column-gap: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 3rem;
+  cursor: pointer;
+}
+
+.container .content-wrapper .featured-content .more-button {
+  background-color: rgb(145, 142, 142, 0.5);
+  color: white;
+}
+
+/*! Home End */
+/*! Filter Start */
+
+.container .movie-filter {
+  margin: 2rem 0 2rem 2rem;
+}
+
+.container .movie-filter select {
+  background-color: var(--Main-color);
+  border: solid 0.1rem white;
+  padding: 0.7rem 0.2rem;
+  color: var(--Font-color);
+}
+
+/*! Filter End */
+/*! Movie List Start */
+
+.movie-list-container {
+  margin-left: 2rem;
+}
+
+.movie-list-container h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+.movie-list-container .movie-list-wrapper .movie-list {
+  height: 300px;
+  display: flex;
+  align-items: center;
+  column-gap: 2rem;
+  transform: translateX(0);
+  transition: 1s all ease-in-out;
+}
+
+.movie-list-container .movie-list-wrapper {
+  /*height: 30rem;
+  display: flex;
+  align-items: center;
+  column-gap: 2rem;*/
+  overflow: hidden;
+  position: relative;
+}
+
+.movie-list-container .movie-list-wrapper .movie-item {
+  position: relative;
+  transition: all 0.9s ease;
+}
+
+.movie-list-container .movie-list-wrapper .movie-item:hover {
+  transform: scale(1.2);
+  margin: 0 20px;
+}
+
+.movie-list-container .movie-list-wrapper .movie-item:hover .movie-item-title,
+.movie-list-container
+  .movie-list-wrapper
+  .movie-item:hover
+  .movie-item-buttons {
+  opacity: 1;
+}
+
+.movie-list-container .movie-list-wrapper .movie-item-img {
+  width: 290px;
+  height: 210px;
+}
+
+.movie-list-container .movie-list-wrapper .movie-item .movie-item-title {
+  background-color: rgb(40, 40, 40, 0.4);
+  font-size: 2.6rem;
+  font-weight: bold;
+  position: absolute;
+  text-align: center;
+  top: 10%;
+  left: 10%;
+  opacity: 0;
+  transition: all 0.9s ease;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.movie-list-container .movie-list-wrapper .movie-item .movie-item-buttons {
+  background-color: rgb(40, 40, 40, 0.6);
+  position: absolute;
+  bottom: 10%;
+  left: 25%;
+  display: flex;
+  column-gap: 20px;
+  opacity: 0;
+  transition: all 0.9s ease;
+}
+
+.movie-list-container .movie-list-wrapper .movie-item .movie-item-buttons i {
+  font-size: 19px;
+  opacity: 0.5;
+}
+
+.movie-list-container
+  .movie-list-wrapper
+  .movie-item
+  .movie-item-buttons
+  i:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.movie-list-container .movie-list-wrapper .arrow {
+  width: 100px;
+  display: flex;
+  font-size: 120px;
+  position: absolute;
+  right: 0;
+  top: 100px;
+  opacity: 0.5;
+  transition: 0.5s ease all;
+  cursor: pointer;
+}
+
+.movie-list-container .movie-list-wrapper .arrow:hover {
+  opacity: 1;
+}
+
+/*! Movie List End */
+/*! Footer Start */
+
+.footer-container{
+    width: 100%;
+    background-color: #000;
+    border-top: 0.1rem solid #ccc;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    height: 7rem;
+    font-size: 2rem;
+}
+
+.footer-container .footer{
+    width: 100%;
+}
+
+.footer-container .footer span{
+   color: red;
+}
+
+/*! Footer End */
+/*! Dark Mode Start */
+.navbar-container.active {
+  background-color: white;
+}
+.container.active {
+  background-color: white;
+}
+
+.navbar.active {
+  background-color: white;
+  color: #000;
+}
+
+.navbar-container .navbar .menu-list a.active {
+  color: #000;
+}
+
+.navbar-container .navbar .profile-container .toggle.active {
+  background-color: #000;
+}
+
+.sidebar.active {
+  background-color: white;
+}
+
+.sidebar i.active {
+  color: black;
+}
+
+.movie-list-title.active {
+  color: black;
+}
+
+.navbar-container .navbar .profile-container .toggle .toggle-ball.active {
+  background-color: white;
+  transform: translateX(-2rem);
+}
+
+.movie-list-filter select.active {
+  background-color: white;
+  color: black;
+}
+
+.movie-list-container h1.active {
+  color: black;
+}
+
+.container .content-wrapper.active {
+  background: url(../img/batmanbg.jpg) no-repeat;
+  padding: 50px;
+  height: calc(100vh - 56.25px);
+  background-size: 100% 100%;
+  object-fit: cover;
+}
+
+.container .content-wrapper .featured-content .bgimg.active {
+  background:none;
+}
+
+.container .content-wrapper .featured-content p.active{
+    color: #000;
+} 
+
+.footer-container.active{
+    border-top: 0.1rem solid #000;
+    background-color: #fff;
+    color: #000;
+}
+
+/*! Dark Mode End */
+/*! Responsive Start*/
+
+@media only screen and (max-width:1200px) {
+    html{
+        font-size: 55%;
+    }
+
+    .bgimg{
+        background-size: 50% 50%;
+    }
+}
+
+@media only screen and (max-width:876px) {
+    html{
+        font-size: 50%;
+    }
+    .navbar-container .navbar .menu-list {
+        display: none;
+    }
+
+    .container .content-wrapper{
+        height: 80vh;
+    }
+
+    .container .content-wrapper.active{
+        height: 80vh;
+    }
+}
+
+@media only screen and (max-width:500px) {
+    html{
+        font-size: 40%;
+    }
+
+    .container .content-wrapper{
+        height: 60vh;
+    }
+
+    .container .content-wrapper.active{
+        height: 60vh;
+    }
+
+    .container .content-wrapper .featured-content p.active{
+        color:white
+    } 
+
+    .container .content-wrapper .featured-content .bgimg{
+        display: none;
+    }
+
+    .container .content-wrapper {
+        position: relative;
+    }
+    .container .content-wrapper .featured-content{
+        position: absolute;
+        bottom: 15%;
+        left: 8%;
+    }
+
+}
+
+@media only screen and (max-width:360px){
+    html{
+        font-size: 30%;
+    }
+
+    .container .content-wrapper{
+        height: 40vh;
+    }
+
+    .container .content-wrapper.active{
+        height: 40vh;
+    }
+
+    .container .content-wrapper {
+        position: relative;
+    }
+    .container .content-wrapper .featured-content{
+        position: absolute;
+        bottom: 15%;
+        left: 8%;
+    }
+}
+
+/*! Responsive End */
